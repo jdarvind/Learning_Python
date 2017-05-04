@@ -1,0 +1,29 @@
+marks = [10,20,30,22,32,12,43,23,15]
+print(marks)
+def sum_grades(score):
+    sum_mark = 0
+    for row in score:
+        sum_mark += row
+    return(sum_mark)
+
+def average(score):
+    sum_grade = sum_grades(score)
+    avg = sum_grade/float(len(score))
+    return(avg)
+
+def variance(score):
+    avg = average(score)
+    var = 0
+    for row in score:
+        var += (avg - row) ** 2
+        total_var = var/len(score)
+    return(total_var)
+
+def std_dev(score):
+    std = variance(score) ** 0.5
+    return(std)
+
+print(sum_grades(marks))
+print(average(marks))
+print(variance(marks))     
+print(std_dev(marks))      
