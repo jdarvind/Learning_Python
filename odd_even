@@ -1,0 +1,8 @@
+lists = [2,3,4,5,6,7,8,9,10]
+lists_1 = []
+for lis in lists:    
+    if lis % 2 == 0:
+        lists_1.append("even")
+    else:
+        lists_1.append("odd")
+print(lists_1)   
