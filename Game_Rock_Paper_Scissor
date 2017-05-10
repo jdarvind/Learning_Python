@@ -1,0 +1,35 @@
+import random
+
+player = 0
+computer =  0
+
+for row in range(3):
+    player1 = str(input())
+    player2 = ["rock","paper","scissor"]
+    n = random.choice(player2)
+    if player1.lower() == 'rock' and n == 'paper':
+        print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
+        computer += 1
+    elif player1.lower() == 'paper' and n == 'scissor':
+        print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
+        computer += 1
+    elif player1.lower() == 'scissor' and n == 'rock':
+        print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
+        computer += 1
+    elif player1.lower() == n:
+        print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
+    elif player1.lower() not in player2:
+        computer += 1
+        print('You lose 1 point, Enter either rock or paper or scissor')
+    else:
+        print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
+        player += 1
+
+print('\n'+"Your Points:"+str(player)+'\n'+" Computer's Points:"+str(computer))
+
+if player > computer:
+    print("You win")
+elif player < computer:
+    print("Computer wins")
+else:
+    print("Draw")
