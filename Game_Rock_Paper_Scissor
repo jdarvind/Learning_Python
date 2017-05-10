@@ -2,10 +2,10 @@ import random
 
 player = 0
 computer =  0
+player2 = ["rock","paper","scissor"]
 
 for row in range(3):
     player1 = str(input())
-    player2 = ["rock","paper","scissor"]
     n = random.choice(player2)
     if player1.lower() == 'rock' and n == 'paper':
         print("Your Choice is:" + player1 + '\n', "Computer choice is:" + n)
