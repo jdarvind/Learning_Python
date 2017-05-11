@@ -1,0 +1,8 @@
+n = int(input()) #Enter decimal number
+lis=[]
+while(n>0):
+    x = n%2
+    lis.append(str(x))
+    n = int(n/2)
+    
+print(''.join(lis[::-1])) #prints binary number
